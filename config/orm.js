@@ -1,11 +1,9 @@
 // Import MySQL connection.
+//========================================================
 const connection = require('../config/connection.js');
+
 // Helper function for SQL syntax.
-// Let's say we want to pass 3 values into the mySQL query.
-// In order to write the query, we need 3 question marks.
-// The above helper function loops through and creates an array
-// of question marks - ["?", "?", "?"] - and turns it into a string.
-// ["?", "?", "?"].toString() => "?,?,?";
+//========================================================
 function printQuestionMarks(num) {
   const arr = [];
 
@@ -17,6 +15,7 @@ function printQuestionMarks(num) {
 }
 
 // Helper function to convert object key/value pairs to SQL syntax
+//========================================================
 function objToSql(ob) {
   const arr = [];
 
@@ -25,13 +24,10 @@ function objToSql(ob) {
     // check to skip hidden properties
     if (Object.hasOwnProperty.call(ob, key)) {
       let value = ob[key];
-      // if string with spaces,
-      // add quotations (Lana Del Grey => 'Lana Del Grey')
+      
       if (typeof value === 'string' && value.indexOf(' ') >= 0) {
         value = `'${value}'`;
       }
-      // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-      // e.g. {sleepy: true} => ["sleepy=true"]
       arr.push(key + '=' + value);
     }
   }
@@ -41,6 +37,7 @@ function objToSql(ob) {
 }
 
 // Object for all our SQL statement functions.
+//========================================================
 const orm = {
   all: function(tableInput, cb) {
     const queryString = 'SELECT * FROM ' + tableInput + ';';
@@ -71,7 +68,7 @@ const orm = {
       cb(result);
     });
   },
-  // An example of objColVals would be {name: panther, sleepy: true}
+  
   update: function(table, objColVals, condition, cb) {
     let queryString = 'UPDATE ' + table;
 
@@ -108,4 +105,5 @@ const orm = {
 };
 
 // Export the orm object for the model (burger.js).
+//========================================================
 module.exports = orm;

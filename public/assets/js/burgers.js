@@ -1,4 +1,5 @@
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
+// Attach handlers until the DOM is fully loaded.
+//========================================================
 $(function() {
   $('.change-devoured').on('click', function(event) {
     const id = $(this).data('id');
@@ -37,7 +38,7 @@ console.log($(this).data)
   });
 
   $('.create-form').on('submit', function(event) {
-    // Make sure to preventDefault on a submit event.
+    // PreventDefault on a submit event.
     event.preventDefault();
 
     const newBurger = {
