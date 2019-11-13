@@ -1,10 +1,10 @@
-# Burger Menu - Node and Express Servers
+# Classic Burgers - Node and Express Servers
 
 <br>
 
 ## Description
 
-Eat-Da-Burger is a burger logger that takes in orders from the user and shows an ordered list of orders to be completed. Burgers from the list can be devoured and moved to a seperate list using Object-Relational Mapping (ORM).
+Classic Burgers is a logger that takes in orders from the user and shows an ordered list of orders to be completed. Burgers from the list can be devoured and moved to a seperate list using Object-Relational Mapping (ORM).
 
 
 
@@ -32,6 +32,7 @@ This is app contains the following files:
       - assets
         - css
           - burger_style.css
+        -img
         - js
           - burger.js
     - views
@@ -53,25 +54,28 @@ This is app contains the following files:
 
 The user begins at:
 
-![HomeScreen](assets/images/HomeScreen.png)
+![StartPage](public/assets/img/StartPage.png)
 
-Then after the **Find Friend!** form, is filled out the burger name appears on the left side above the form until the **buttono** button is clicked
+The user can fill out the **Burger Name** form, 
 
-![InitialSurvey](assets/images/InitialSurvey.png)
+![OrderInput](public/assets/img/OrderInput.png)
+![AsOrder](public/assets/img/AsOrder.png)
+
+The burger name appears on the left side above the form until the **Devour** button is clicked
+
+![AsDevoured](public/assets/img/AsDevoured.png)
 
 This moves the selected burger to the right column on the screen designated for devoured burgers
 
 ## This App Utilizes
 
-   * [Node](https://www.npmjs.com/package/path)
+   * [Node](https://nodejs.org/en/about/)
 
    * [Express](https://www.npmjs.com/package/express)
 
-   * [Handlebars](https://www.npmjs.com/package/path)
+   * [Handlebars](https://handlebarsjs.com/)
 
-   * [MySQL](https://www.npmjs.com/package/path)
-
-   * [JawsDB](https://www.npmjs.com/package/path)
+   * [MySQL](https://www.mysql.com/)
 
 
 
@@ -82,4 +86,4 @@ This moves the selected burger to the right column on the screen designated for 
 My name is Alex I am a bootcamp student whose portfolio can be found
 [here]( https://alexsamalot19.github.io/Samalot-Alexander-Portfolio/).
 
-I designed this app using existing APIs and packages listed in the **This App Utilizes** section. I used Node and MySQL to query and route data in this app, and Handlebars to generate your HTML. The site is deployed to Heroku [here](https://friendfinder987.herokuapp.com/).
+I designed this app using existing APIs and packages listed in the **This App Utilizes** section. I used Node and MySQL to query and route data in this app, and Handlebars to generate your HTML. The site is deployed to Heroku [here](https://burger9.herokuapp.com/).
