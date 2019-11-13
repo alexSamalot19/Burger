@@ -1,29 +1,31 @@
 body {
   background-color:white;
-  font-family:  'Great Vibes', cursive;
+  font-family: 'Orbitron', sans-serif;
 }
-.panel-default{
+
+button {
+  background-color: #ff3399;
+  font-family: 'Orbitron', sans-serif;
+}
+
+
+.panel-default {
 float: left;
 }
 
 li {
     padding: 5px;
     margin: 5px;
-    background: #faebd7;
   }
   
   .label {
     font-weight: bold;
   }
   
-  .create-update-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-  }
   
   .form-group {
     margin-bottom: 5px;
   }
+
   
   
